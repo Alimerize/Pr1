@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "TTLakes-Regular"; 
+    src: url("../Pr1/TTLakes-Regular.woff") format('woff');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+
+
+body {
+    background-color: #F8F8F8;
+    font-family: 'TTLakes-Regular';
+    color: #1B1C21;
+}
+
+.icon-group, .icon-group-h {
+    margin-left: auto;
+}
+
+.icon-group-h .h-icon, .part {
+    margin-right: 10px;
+}
+
+.full-h, .icon-group-h, .text-theme, .part {
+    display: flex;
+    align-items: center;
+}
+
+.h-line {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #41F6D7;
+    width: 4px;
+    height: 40px;
+    margin: 0px;
+    margin-right: 10px;
+}
+
+.work-list {
+    height: 82px;
+    width: auto; /* Ширина контейнера */
+    white-space: nowrap;
+
+}
+
+.work-list::-webkit-scrollbar {
+    display: none;
+}
+
+.link-list {
+    list-style-type: none; /* Удаляем маркеры */
+    padding: 0;
+    margin: 0;
+    scrollbar-width: none;
+}
+
+.link-list li {
+    display: inline-block; /* Элементы списка в одну строку */
+    padding: 10px; /* Отступы внутри элементов */
+    height: 40px;
+}
+
+.work-list a:hover {
+    padding: 10px;
+    border: solid #B8FFEC 2px;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+}
+
+.work-list a {
+    padding: 10px;
+    border: solid #F8F8F8 2px;
+    border-radius: 6px;
+}
+
+.text-content {
+    margin-left: 10px;
+}
+
+.header .header-icon {
+    height: 40px;
+}
+
+.header-icon, .group-label {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+@media (min-width: 321px)  {
+    .line-1, .line-3 {
+        width: 2px;
+        height: 32px;
+        background-color: #EAEAEA;
+        border-radius: 1px;
+    }
+}
+
+@media (max-width: 768px){
+    .work-list {
+        height: 40px;
+        width: auto; /* Ширина контейнера */
+        overflow-x: auto;
+        overflow-y: hidden; 
+        white-space: nowrap; /* Запрещаем перенос текста на следующую строку */
+    }
+}
+
+@media (max-width: 1120px) {
+    .header {
+        display: flex;
+        align-items: center; 
+        background-color: #FFFFFF;
+        height: 88px;
+        box-shadow: 0 1px #D9FFF5;
+    }
+    .header-text {
+        display: none;
+    }
+    .icon-group-h {
+        display: none;
+    }
+}
+
+@media (min-width: 1120px)  {
+    header {
+        display: none;
+    }
+    .h-icon {
+        display: inline-block;
+    }
+}
+
+.group-label {
+    width: 96.55px;
+}
+
+.link-list, .read-next {
+    font-size: 16px;
+    margin: 10px;
+    width: 132px;
+    height: 24px;
+}
+
+@media (max-width: 320px) {
+    .icon-4, .icon-5, .icon-6, .line-1, .line-3 {
+        display: none; 
+    }
+    .line-2 {
+        width: 2px;
+        height: 32px;
+        background-color: #EAEAEA;
+        border-radius: 1px;
+    }
+}
