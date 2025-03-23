@@ -35,7 +35,7 @@ header {
 .left-menu {
     font-size: 16px;
     font-weight: 500;
-    position: fixed; /* или absolute, если нужно позиционирование относительно родителя */
+    position: fixed;
     top: 0;
     left: 0;
     width: 320px;
@@ -56,8 +56,9 @@ header {
 }
 
 .left-menu__top-button{
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 24px;
+    margin-right: 24px;
+    margin-left: 24px;
     vertical-align: middle;
 }
 
@@ -65,18 +66,9 @@ header {
     margin-left: 20px;
 }
 
-.left-menu__bottom-button {
-    margin-right: 20px;
-}
-
 .left-menu__top-logo {
-    width: 97px;
-    height: 51px;
-}
-
-.left-menu__top-button__search {
-    float: right;
-    margin-right: 20px;
+    width: 98px;
+    height: 52px;
 }
 
 .left-menu__link {
@@ -128,18 +120,39 @@ header {
 }
 
 .left-menu__bottom-button {
-    background: none;       /* Убираем фон */
-    border: none;          /* Убираем рамку */
-    color: inherit;        /* Устанавливаем цвет текста как у родительского элемента */
-    font: inherit;         /* Устанавливаем шрифт как у родительского элемента */
-    padding: 0;            /* Убираем отступы */
-    cursor: pointer;       /* Устанавливаем курсор как указатель при наведении */
-    text-decoration: none;  /* Убираем подчеркивание */
+    background: none;       
+    border: none;        
+    color: inherit;       
+    font: inherit;     
+    padding: 0;           
+    cursor: pointer;       
+    text-decoration: none;  
+}
+
+.left-menu__button {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none; 
+    padding: 0; 
+    margin-right: 24px; 
+    font: inherit; 
+    color: inherit; 
+    cursor: pointer; 
 }
 
 .left-menu__bottom-group {
-    position: absolute; /* Устанавливаем абсолютное позиционирование */
+    position: absolute;
     bottom: 0;
+}
+
+.left-menu__shadow {
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    left: 320px;
+    background: linear-gradient(to right, #939397, #ffffff00);
+    z-index: 2;
 }
 
 .icon-4, .icon-1 {
@@ -179,7 +192,7 @@ header {
 }
 
 .work-list {
-    width: auto; /* Ширина контейнера */
+    width: auto; 
     white-space: nowrap;
 
 }
@@ -189,15 +202,15 @@ header {
 }
 
 .link-list {
-    list-style-type: none; /* Удаляем маркеры */
+    list-style-type: none; 
     padding: 0;
     margin: 0;
     scrollbar-width: none;
 }
 
 .link-list li {
-    display: inline-block; /* Элементы списка в одну строку */
-    padding: 10px; /* Отступы внутри элементов */
+    display: inline-block; 
+    padding: 10px; 
 }
 
 .work-list a:hover {
@@ -231,14 +244,88 @@ header {
 }
 
 .read-next {
-    background: none; /* Убираем фоновый цвет */
-    border: none; /* Убираем рамку */
-    color: inherit; /* Унаследуем цвет текста от родителя */
-    font: inherit; /* Унаследуем шрифт от родителя */
-    cursor: pointer; /* Указатель при наведении */
-    padding: 0; /* Убираем отступы */
+    background: none; 
+    border: none; 
+    color: inherit; 
+    font: inherit; 
+    cursor: pointer; 
+    padding: 0; 
     margin: 0px;
     font-weight: bold;
+}
+
+.block-full {
+    max-height: 288px;
+    width: 100%;
+}
+
+.block-h {
+    background: linear-gradient(to right, #F8F8F8, #FFFFFF);
+    margin: 0px;
+    height: 22px;
+    padding: 16px;
+    padding-left: 32px;
+    border-top: 1px solid #D9FFF5;
+}
+
+.block-h__p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #7E7E82;
+    margin: 0px;
+}
+
+.block__link-list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: auto;
+    flex-direction: row;
+}
+
+.block__link-list__li {
+    display: inline-block;
+    background-color: #FFFFFF;
+    height: 72px;
+    width: 240px;
+    border: solid #EAEAEA 1px;
+    border-radius: 6px;  
+    margin: 8px 12px;  
+}
+
+.block__link-list__li__svg-1 {
+    height: 44px;
+    max-width: 128px;
+    float: left;
+    margin: 18px;
+}
+
+.block__link-list__li__svg-2 {
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin: 16px;
+}
+
+.swiper {
+    width: 100%; 
+    height: 120px; 
+}
+
+.block__gradient {
+    height: 90px;
+    width: 24px;
+    position: absolute;
+    z-index: 2;
+}
+
+.block__gradient-right {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0) ,#F8F8F8 );
+    right: 0px;
+}
+
+.block__gradient-left {
+    background: linear-gradient(to right, #F8F8F8 ,rgba(255, 0, 0, 0));
 }
 
 @media (min-width: 321px)  {
@@ -251,6 +338,7 @@ header {
 }
 
 @media (max-width: 768px) {
+
     .text-content, .main-content__image-1 {
         width: 100%;
     }
@@ -273,8 +361,13 @@ header {
     .icon-group-h {
         display: none;
     }
+
+    .block__link-list__li-3 {
+        clear: right;
+    }
+
     .work-list {
-        width: auto; /* Ширина контейнера */
+        width: auto;
         overflow-x: auto;
         overflow-y: hidden; 
         white-space: nowrap; /* Запрещаем перенос текста на следующую строку */
@@ -292,7 +385,7 @@ header {
         display: inline-block;
     }
     .link-list {
-        display: flex; /* Используем flexbox для списка */
+        display: flex; 
         flex-wrap: wrap;
     }
     .link-list__link {
@@ -303,7 +396,12 @@ header {
 @media (max-width: 320px) {
     .icon-4, .icon-2, .icon-3, .line-1, .line-2 {
         display: none; 
+    } 
+
+    .block-h {
+        height: 80px;
     }
+
     .line-3 {
         width: 2px;
         height: 32px;
@@ -313,6 +411,7 @@ header {
 }
 
 @media (min-width: 768px) {
+
     .content-text-group__group-1 { 
         overflow: hidden;
         margin-right: auto;
@@ -329,4 +428,19 @@ header {
         width: 50%;
         height: auto;
     }
+}
+
+@media (min-width: 1050px) and (max-width: 1120px) {
+    .block__link-list__li:nth-child(3) {
+        margin-right: 80px;
+    }
+}
+
+@media (max-width: 799px) {
+    .block__link-list, .block__link-list__button {
+        display: none;
+    }
+}
+.hidden {
+    display: none;
 }
