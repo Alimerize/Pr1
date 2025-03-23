@@ -1,1 +1,1 @@
-https://github.com/Alimerize/Pr1/blob/main/pr1.html рабочая актуальная версия
+https://github.com/Alimerize/Pr1/blob/main/pr1__block.html
